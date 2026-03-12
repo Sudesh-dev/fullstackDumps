@@ -7,7 +7,7 @@ let intervalId = setInterval(
         countDown-=1;
         timerEl.textContent = countDown;
         if(countDown===0){
-            timerEl.textContent = 'BOOM';
+            timerEl.textContent = 'BOOM';   
             clearInterval(intervalId);
         }
     },1000
