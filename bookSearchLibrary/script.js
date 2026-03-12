@@ -27,6 +27,7 @@ function searchForBooks(event) {
                 searchResultseEl.classList.remove('d-none');
                 let total = jsonData.total;
                 let noResults = document.createElement('h1');
+                noResults.classList.add('mb-3','pl-3');
                 if (total === 0) {
                     noResults.textContent = "No results found";
                     noResults.classList.add('text-center');
