@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+/* This will be covered in further sessions */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Roboto;
+}
+
+.bg-container {
+    height: 100vh;
+    width: 100%;
+}
+
+.music-header {
+    font-family: Roboto;
+    font-size: 34px;
+    padding: 20px;
+    margin: 0;
+}
+
+hr {
+    width: 100%;
+    padding: 0;
+}
+
+.music-night {
+    background-color: white;
+    padding: 20px;
+    height: 100vh;
+    background: url(https://assets.ccbp.in/frontend/intermediate-rwd/musical-night-bg.png);
+
+}
+
+.music-img {
+    max-height: 30vh;
+    min-width: 80px;
+    max-width: 400px;
+}
+
+.small-imgs {
+    max-width: 180px;
+    padding: 10px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    height: 80%;
+    overflow: auto;
+}
