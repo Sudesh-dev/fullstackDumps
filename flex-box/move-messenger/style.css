@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.bg-container {
+    background-color: #fef7e7;
+    height: 100vh;
+    padding: 20px;
+}
+
+.messenger-img {
+    width: 300px;
+    height: 300px;
+}
+
+@media (max-width:767px) {
+    .messenger-img-container {
+        order: 0;
+    }
+
+    .messenger-details-container {
+        order: 1;
+    }
+}
+
+@media (min-width:768px) {
+    .bg-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .messenger-img-container {
+        order: 1;
+    }
+
+    .messenger-details-container {
+        order: 0;
+        width: 600px;
+    }
+}
+
+.messenger-title {
+    font-size: 34px;
+    font-family: Roboto;
+}
+
+.messenger-content {
+    font-family: Roboto;
+    color: #858a8f;
+}
+
+.btn {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 0;
+    background-color: #f1b80b;
+    color: white;
+    font-family: Roboto;
+    border-radius: 8px;
+
+}
