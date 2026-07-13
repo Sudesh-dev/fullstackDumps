@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.know-more {
+    margin: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 18px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.get-started {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 18px;
+    border: 0;
+    margin: 10px;
+}
+
+.bg-container {
+    height: 100vh;
+    padding: 20px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-width: 600px;
+}
+
+.travel-header {
+    color: white;
+    font-family: Roboto;
+    text-align: center;
+}
+
+.travel-content {
+    color: white;
+    font-family: Roboto;
+    font-size: 18px;
+    text-align: center;
+}
+
+@media (max-width:767px) {
+    .bg-container {
+        background-image: url('https://assets.ccbp.in/frontend/intermediate-rwd/travel-sm-bg.png');
+    }
+
+    .travel-header {
+        font-size: 36px;
+    }
+
+    .details-container {
+        width: 100%;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .get-started {
+        width: 100%;
+    }
+
+    .know-more {
+        width: 100%;
+    }
+}
+
+
+@media (min-width:768px) {
+    .bg-container {
+        background-image: url('https://assets.ccbp.in/frontend/intermediate-rwd/travel-md-bg.png');
+    }
+
+    .travel-header {
+        font-size: 43px;
+    }
+}
