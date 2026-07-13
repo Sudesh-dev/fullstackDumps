@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.nav {
+    background-image: linear-gradient(to right, #000000, #9aa5b1);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-img {
+    width: 100px;
+    height: 40px;
+}
+
+.nav-list {
+    color: white;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    font-family: Roboto;
+}
+
+.list-item {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 10px;
+    height: 90vh;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.body-img {
+    width: 400px;
+    align-self: center;
+}
+
+.body-title {
+    color: white;
+    font-family: Roboto;
+}
+
+.body-content {
+    color: white;
+    font-family: Roboto;
+}
+
+.body-footer {
+    color: #9aa5b1;
+    align-self: flex-end;
+}
