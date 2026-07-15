@@ -1,0 +1,28 @@
+-- Goodreads DB schema (SQLite)
+PRAGMA foreign_keys = ON;
+
+CREATE TABLE author (
+  author_id INTEGER PRIMARY KEY,
+  name TEXT,
+  birth_place TEXT,
+  birth_date TEXT,
+  genre TEXT,
+  followers_count INTEGER,
+  about_author TEXT
+);
+
+CREATE TABLE book (
+  book_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT,
+  author_id INTEGER,
+  rating INTEGER,
+  rating_count INTEGER,
+  review_count INTEGER,
+  description TEXT,
+  pages INTEGER,
+  date_of_publication TEXT,
+  edition_language TEXT,
+  price INTEGER,
+  online_stores TEXT,
+  FOREIGN KEY(author_id) REFERENCES author(author_id) ON DELETE CASCADE
+);
