@@ -1,6 +1,6 @@
 const express = require('express')
 const path = require('path')
-const {open} = require('sqlite')
+const { open } = require('sqlite')
 const sqlite3 = require('sqlite3')
 const bcrypt = require('bcrypt')
 
@@ -27,7 +27,7 @@ const initializeDBAndServer = async () => {
 initializeDBAndServer()
 
 app.post('/register', async (req, res) => {
-  const {username, name, password, gender, location} = req.body
+  const { username, name, password, gender, location } = req.body
   if (password.length < 5) {
     res.status(400)
     return res.send('Password is too short')
@@ -58,7 +58,8 @@ app.post('/register', async (req, res) => {
 })
 
 app.post('/login', async (req, res) => {
-  const {username, password} = req.body
+  const attempts = 0
+  const { username, password } = req.body
   const selectUserQuery = `select * from user where username = '${username}';`
   const dbUsed = await db.get(selectUserQuery)
 
@@ -68,16 +69,20 @@ app.post('/login', async (req, res) => {
   } else {
     const passwordMatch = await bcrypt.compare(password, dbUsed.password)
     if (passwordMatch) {
-      res.send('Login success!')
-    } else {
-      res.status(400)
-      res.send('Invalid password')
+      if (attempts <= 5) {
+        res.send('Login success!')
+        attempts=0
+      } else {
+        res.status(400)
+        res.send('Invalid password')
+        attempts += 1
+      }
     }
   }
 })
 
 app.put('/change-password', async (req, res) => {
-  const {username, oldPassword, newPassword} = req.body
+  const { username, oldPassword, newPassword } = req.body
 
   const selectUserQuery = `select * from user where username = '${username}';`
   const dbUser = await db.get(selectUserQuery)
