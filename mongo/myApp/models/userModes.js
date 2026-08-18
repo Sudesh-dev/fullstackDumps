@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
         default:"user"
     },
     isActive:{
-        type:boolean,
+        type:Boolean,
         default:true
     },
     createdAt:{
