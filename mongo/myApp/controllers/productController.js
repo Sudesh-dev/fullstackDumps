@@ -14,4 +14,63 @@ const newProduct = async (req,res)=>{
     }
 }
 
-module.exports = {newProduct}
+
+const getProduct = async (req,res)=>{
+    try{
+        const products = await Product.find()
+        res.status(200).json({
+            count: products.length,
+            products
+        })
+    }
+    catch(e){
+        res.status(500).json(e.message)
+    }
+}
+
+const getProductById = async (req, res)=>{
+    try{
+        const product = await Product.findById(req.params.id)
+        if(!product){
+            res.status(404).json({
+    message: "Product Not Found"
+})        }
+res.status(200).json(product)
+    }
+    catch(e){
+        res.status(500).json(e.message)
+    }
+}
+
+const updateProduct = async (req,res)=>{
+    try{
+        const product = await Product.findByIdAndUpdate(req.params.id, req.body, {new:true})
+        if(!product){
+            res.status(404).json({
+    message: "Product Not Found"
+})        }
+res.status(200).json(product)
+    }
+    catch(e){
+        res.status(500).json(e.message)
+    }
+}
+
+const deleteProduct = async (req,res)=>{
+    try{
+    const product = await Product.findByIdAndDelete(req.params.id)
+    if(!product){
+            res.status(404).json({
+    message: "Product Not Found"
+})        }
+res.status(200).json({
+    message:"Product deleted successfully",
+    product
+})
+    }
+    catch(e){
+        res.status(500).json(e.message)
+    }
+}
+
+module.exports = {newProduct, getProduct, getProductById , updateProduct, deleteProduct}
